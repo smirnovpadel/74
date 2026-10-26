@@ -26,11 +26,7 @@
       --text-muted: #94a3b8;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -51,7 +47,6 @@
       gap: 18px;
     }
 
-    /* Hero Card */
     .hero-card {
       background: linear-gradient(180deg, var(--navy-card) 0%, var(--navy-deep) 100%);
       border: 1px solid var(--navy-border);
@@ -91,18 +86,23 @@
       margin-bottom: 18px;
     }
 
-    .hero-icon {
-      width: 76px;
-      height: 76px;
+    .avatar-wrap {
+      width: 110px;
+      height: 110px;
       margin: 0 auto 16px;
       border-radius: 50%;
-      border: 2px solid var(--burgundy-light);
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 34px;
+      border: 3px solid var(--burgundy-light);
+      padding: 3px;
+      background: #0f172a;
       box-shadow: 0 0 25px var(--burgundy-glow);
+    }
+
+    .avatar-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero-title {
@@ -131,7 +131,6 @@
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    /* Stats Grid */
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -165,17 +164,39 @@
       line-height: 1.25;
     }
 
-    .section-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-white);
-      margin: 8px 0 4px;
+    .team-banner-card {
+      background: var(--navy-deep);
+      border: 1px solid var(--navy-border);
+      border-radius: 24px;
+      overflow: hidden;
       display: flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 
-    /* Lead Magnet */
+    .team-banner-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team-banner-body {
+      padding: 18px 20px;
+    }
+
+    .team-banner-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 4px;
+    }
+
+    .team-banner-body p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
     .lead-magnet-card {
       background: linear-gradient(135deg, #420814 0%, #17243c 100%);
       border: 1px solid rgba(168, 28, 57, 0.6);
@@ -198,7 +219,6 @@
       margin-bottom: 16px;
     }
 
-    /* Buttons */
     .btn {
       display: flex;
       align-items: center;
@@ -238,7 +258,16 @@
       transform: translateY(-1px);
     }
 
-    /* Cards */
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-white);
+      margin: 8px 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .card-list {
       display: flex;
       flex-direction: column;
@@ -284,7 +313,6 @@
       white-space: nowrap;
     }
 
-    /* Steps */
     .steps-card {
       background: var(--navy-deep);
       border: 1px solid var(--navy-border);
@@ -348,7 +376,9 @@
     <!-- Hero Profile -->
     <header class="hero-card">
       <div class="badge-pill">ЧЕЛЯБИНСК • SMIRNOV TEAM</div>
-      <div class="hero-icon">🎾</div>
+      <div class="avatar-wrap">
+        <img src="IMG_5304.jpeg" onerror="this.onerror=null; this.src='IMG_5304.jpg';" alt="Александр Смирнов">
+      </div>
       <h1 class="hero-title">Александр Смирнов</h1>
       <p class="hero-sub">Тренер по паделу & Основатель Smirnov Team</p>
       <div class="hero-desc">
@@ -369,6 +399,15 @@
       <div class="stat-box">
         <div class="stat-val">TEAM</div>
         <div class="stat-lbl">привёл к результату 100+ игроков</div>
+      </div>
+    </section>
+
+    <!-- Smirnov Team Showcase Card -->
+    <section class="team-banner-card">
+      <img src="IMG_6518.jpeg" onerror="this.onerror=null; this.src='IMG_6518.jpg';" alt="Smirnov Team Челябинск" class="team-banner-img">
+      <div class="team-banner-body">
+        <h3>🏆 Сообщество Smirnov Team</h3>
+        <p>Клубные турниры, выездные сборы, совместные игры и тренировки в дружной атмосфере.</p>
       </div>
     </section>
 
