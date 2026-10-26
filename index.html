@@ -44,7 +44,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:radial-gradient(circl
 .format-card:hover{border-color:var(--burgundy-light);transform:translateX(3px)}
 .format-info h3{font-size:15px;font-weight:700;color:var(--text-white);margin-bottom:3px}
 .format-info p{font-size:12px;color:var(--text-muted)}
-.tag-pill{background:rgba(133,20,43,0.25);border:1px solid rgba(168,28,57,0.4);padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;color:#ff99ab;white-space:nowrap}
+.tag-pill{background:rgba(133,20,43,0.25);border:1px solid rgba(168,28,57,0.4);padding:5px 10px;border-radius:8px;font-size:11px;font-weight:700;color:#ff99ab;white-space:nowrap;text-decoration:none;cursor:pointer}
 .steps-card{background:var(--navy-deep);border:1px solid var(--navy-border);border-radius:22px;padding:20px}
 .step-item{display:flex;gap:14px;margin-bottom:14px}
 .step-item:last-child{margin-bottom:0}
@@ -84,9 +84,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:radial-gradient(circl
 <section>
 <h2 class="section-title">Форматы тренировок</h2>
 <div class="card-list">
-<div class="format-card"><div class="format-info"><h3>Первая тренировка</h3><p>Для новичков: знакомство с игрой</p></div><div class="tag-pill">Хит</div></div>
-<div class="format-card"><div class="format-info"><h3>Сплит (в парах)</h3><p>Тренировка вдвоем: парная динамика и передвижения</p></div><div class="tag-pill">2 игрока</div></div>
-<div class="format-card"><div class="format-info"><h3>Персональный разбор</h3><p>Глубокая проработка ударов (бандеха, вибора и пр.)</p></div><div class="tag-pill">1 на 1</div></div>
+<div class="format-card"><div class="format-info"><h3>Первая тренировка</h3><p>Для новичков: знакомство с игрой</p></div><a href="https://t.me/alx4coach" class="tag-pill" target="_blank" rel="noopener" aria-label="Записаться на первую тренировку в Telegram">Хит</a></div>
+<div class="format-card"><div class="format-info"><h3>Сплит (в парах)</h3><p>Тренировка вдвоем: парная динамика и передвижения</p></div><a href="https://t.me/alx4coach" class="tag-pill" target="_blank" rel="noopener" aria-label="Записаться на тренировку в паре в Telegram">2 игрока</a></div>
+<div class="format-card"><div class="format-info"><h3>Персональный разбор</h3><p>Глубокая проработка ударов (бандеха, вибора и пр.)</p></div><a href="https://t.me/alx4coach" class="tag-pill" target="_blank" rel="noopener" aria-label="Записаться на персональный разбор в Telegram">1 на 1</a></div>
 </div>
 </section>
 <section class="steps-card">
